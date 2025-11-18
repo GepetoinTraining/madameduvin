@@ -1,0 +1,20 @@
+{
+  "name": "madame-du-vin-landing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "@mantine/core": "^7.0.0",
+    "@mantine/hooks": "^7.0.0",
+    "@tabler/icons-react": "^2.40.0",
+    "postcss": "^8.4.31",
+    "postcss-preset-mantine": "^1.9.0"
+  }
+}
