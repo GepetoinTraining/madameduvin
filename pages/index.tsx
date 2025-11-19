@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Container, Title, Text, Button, Group, Stack, Card, SimpleGrid, ThemeIcon, List, Box, BackgroundImage, Overlay } from '@mantine/core';
+import { Container, Title, Text, Button, Group, Stack, Card, SimpleGrid, ThemeIcon, List, Box, BackgroundImage, Overlay, Tooltip } from '@mantine/core';
 import { IconGlassFull, IconBuildingSkyscraper, IconChefHat, IconCalendarEvent, IconBrandWhatsapp } from '@tabler/icons-react';
 
 export default function Home() {
@@ -88,26 +88,56 @@ export default function Home() {
           <Text ta="center" c="dimmed" mb={50}>O valor inclui R$ 1.500 de consumação, que rende ótimas opções:</Text>
           
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing={40}>
-            {/* Example 1 */}
+            {/* Example 1: OLD WORLD */}
             <Card padding="lg" radius="md" withBorder style={{ borderColor: '#333', backgroundColor: '#141517' }}>
               <Title order={3} size="h4" mb="md" c="bordeaux">Experiência "Velho Mundo"</Title>
               <Text c="dimmed" size="sm" mb="md">Uma jornada pela história para 12 convidados.</Text>
               <List spacing="xs" size="sm" center icon={<ThemeIcon color="gray" variant="outline" size={16} radius="xl"><IconGlassFull size={10}/></ThemeIcon>}>
-                <List.Item>Boas-vindas: Espumante Cave Geisse Nature</List.Item>
-                <List.Item>Branco: Chablis Le Classique (França)</List.Item>
-                <List.Item>Tinto: Brunello di Montalcino (Itália)</List.Item>
+                <List.Item>
+                   <WineItem 
+                      name="Boas-vindas: Cave Geisse Nature" 
+                      story="Produzido em Pinto Bandeira (RS) pelo método tradicional (Champenoise). Mário Geisse, o fundador, é considerado a maior lenda das borbulhas na América do Sul." 
+                   />
+                </List.Item>
+                <List.Item>
+                  <WineItem 
+                    name="Branco: Chablis Le Classique (França)" 
+                    story="A mais pura expressão da uva Chardonnay. As vinhas crescem sobre solo calcário rico em fósseis marinhos, o que dá ao vinho um toque mineral e salino inconfundível." 
+                  />
+                </List.Item>
+                <List.Item>
+                  <WineItem 
+                    name="Tinto: Brunello di Montalcino (Itália)" 
+                    story="O 'Rei da Toscana'. Feito 100% com uva Sangiovese Grosso e envelhecido obrigatoriamente por 5 anos antes de sair da vinícola. Potente e eterno." 
+                  />
+                </List.Item>
                 <List.Item>Acompanha: 3x Tábuas de Frios + Pães Artesanais</List.Item>
               </List>
             </Card>
             
-            {/* Example 2 */}
+            {/* Example 2: NEW WORLD */}
             <Card padding="lg" radius="md" withBorder style={{ borderColor: '#333', backgroundColor: '#141517' }}>
               <Title order={3} size="h4" mb="md" c="bordeaux">Descoberta "Novo Mundo"</Title>
               <Text c="dimmed" size="sm" mb="md">Sabores intensos e modernos para 15 convidados.</Text>
               <List spacing="xs" size="sm" center icon={<ThemeIcon color="gray" variant="outline" size={16} radius="xl"><IconGlassFull size={10}/></ThemeIcon>}>
-                <List.Item>Boas-vindas: Rosé estilo Provence (Uruguai)</List.Item>
-                <List.Item>Tinto 1: Catena Zapata Malbec (Argentina)</List.Item>
-                <List.Item>Tinto 2: Napa Valley Cabernet (EUA)</List.Item>
+                <List.Item>
+                  <WineItem 
+                    name="Boas-vindas: Rosé de Provence (Uruguai)" 
+                    story="Inspirado na França, mas com a alma de Garzón. A brisa do Oceano Atlântico resfria as uvas, garantindo uma acidez elétrica e aromas de frutas frescas." 
+                  />
+                </List.Item>
+                <List.Item>
+                  <WineItem 
+                    name="Tinto 1: Catena Zapata Malbec (Argentina)" 
+                    story="O vinho que colocou a América do Sul no mapa mundial. Nicolás Catena foi o pioneiro em plantar vinhas em atitudes extremas nos Andes." 
+                  />
+                </List.Item>
+                <List.Item>
+                  <WineItem 
+                    name="Tinto 2: Napa Valley Cabernet (EUA)" 
+                    story="Famoso pelo 'Julgamento de Paris' de 1976, onde os vinhos da Califórnia venceram os franceses em teste cego. Encorpado, com muita fruta e carvalho." 
+                  />
+                </List.Item>
                 <List.Item>Acompanha: 4x Tábuas de Queijos e Geleias</List.Item>
               </List>
             </Card>
@@ -198,5 +228,22 @@ function Feature({ icon, title, description }: { icon: any, title: string, descr
       <Text size="xl" fw={700} mt="md" ta="center">{title}</Text>
       <Text c="dimmed" ta="center">{description}</Text>
     </Stack>
+  );
+}
+
+function WineItem({ name, story }: { name: string, story: string }) {
+  return (
+    <Tooltip 
+      label={story} 
+      multiline 
+      w={220} 
+      withArrow 
+      transitionProps={{ duration: 200 }}
+      color="gray"
+    >
+      <Text span style={{ cursor: 'help', textDecoration: 'underline dotted #AD4C61', textUnderlineOffset: '3px' }}>
+        {name}
+      </Text>
+    </Tooltip>
   );
 }
