@@ -109,13 +109,14 @@ export default function Home() {
   );
 }
 
+// THIS IS THE FIXED COMPONENT
 function Feature({ icon, title, description }: { icon: any, title: string, description: string }) {
   return (
-    <Stack align="center" textAlign="center">
+    <Stack align="center" gap="sm">
       <ThemeIcon size={80} radius={80} variant="light" color="bordeaux">
         {icon}
       </ThemeIcon>
-      <Text size="xl" fw={700} mt="md">{title}</Text>
+      <Text size="xl" fw={700} mt="md" ta="center">{title}</Text>
       <Text c="dimmed" ta="center">{description}</Text>
     </Stack>
   );
