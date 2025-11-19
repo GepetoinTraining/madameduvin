@@ -5,11 +5,12 @@ import { IconGlassFull, IconBuildingSkyscraper, IconChefHat, IconCalendarEvent, 
 export default function Home() {
   // --- CONFIGURATION ---
   // UPDATE THIS LINK to their real WhatsApp
-  const whatsappLink = "https://wa.me/5547000000000?text=Olá,%20gostaria%20de%20saber%20sobre%20o%20pacote%20corporativo.";
+  // Message is now in PT-BR
+  const whatsappLink = "https://wa.me/554796972470?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Adega%20Exclusiva%20para%20eventos.";
   
   // META TAGS (For beautiful WhatsApp Previews)
-  const metaTitle = "Madame du Vin | Exclusive Corporate Buyouts";
-  const metaDesc = "Reserve our entire 8-table adega for your private team event. Sommelier service, curated wines, and total privacy.";
+  const metaTitle = "Madame du Vin | Eventos Corporativos Exclusivos";
+  const metaDesc = "Reserve nossa adega inteira para o seu evento. Sommelier dedicado, vinhos selecionados e privacidade total.";
   const metaImage = "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=2070&auto=format&fit=crop";
 
   return (
@@ -38,10 +39,10 @@ export default function Home() {
                 Madame du Vin
               </Title>
               <Text size="xl" c="dimmed" style={{ maxWidth: '600px', color: '#E1C4C8' }}>
-                Exclusive Corporate Buyouts & Private Tastings
+                Eventos Corporativos & Degustações Privadas
               </Text>
               <Text size="lg" mt="md" style={{ color: '#fff' }}>
-                The perfect "Third Place" for your team offsite, client closure, or private celebration.
+                O ambiente perfeito para fechar negócios, celebrar metas ou reunir a equipe com privacidade.
               </Text>
               
               <Button 
@@ -52,7 +53,7 @@ export default function Home() {
                 mt={40}
                 leftSection={<IconBrandWhatsapp size={24} />}
               >
-                Reserve Your Date
+                Reservar Data
               </Button>
             </Container>
         </BackgroundImage>
@@ -60,22 +61,22 @@ export default function Home() {
 
       {/* VALUE PROPOSITION */}
       <Container size="lg" py={80}>
-        <Title order={2} ta="center" mb={50}>Why Rent the Adega?</Title>
+        <Title order={2} ta="center" mb={50}>Por que fechar a Adega?</Title>
         <SimpleGrid cols={{ base: 1, sm: 3 }} spacing={50}>
           <Feature 
             icon={<IconBuildingSkyscraper size={40} />} 
-            title="Total Privacy" 
-            description="No shouting over loud music. You get the entire 8-table space for your team to connect properly." 
+            title="Privacidade Total" 
+            description="Sem barulho ou música alta. O espaço de 8 mesas fica 100% reservado para o seu grupo conversar à vontade." 
           />
           <Feature 
             icon={<IconGlassFull size={40} />} 
-            title="Curated Wine List" 
-            description="Sommelier-led selection tailored to your budget. From casual happy hours to premium verticals." 
+            title="Curadoria de Vinhos" 
+            description="Seleção guiada pelo Sommelier, ajustada ao perfil do seu time. De happy hours descontraídos a verticais premium." 
           />
           <Feature 
             icon={<IconChefHat size={40} />} 
-            title="Flexible Catering" 
-            description="We partner with top local restaurants for food delivery, or keep it classic with our premium charcuterie." 
+            title="Gastronomia Flexível" 
+            description="Oferecemos tábuas de frios premium. Para pratos quentes, temos parcerias com restaurantes locais para entrega." 
           />
         </SimpleGrid>
       </Container>
@@ -83,36 +84,36 @@ export default function Home() {
       {/* TANGIBILITY SECTION (VISUALIZING THE SPEND) */}
       <Box bg="#1A1B1E" py={60}>
         <Container size="lg">
-          <Title order={2} ta="center" mb={10} c="white">What does R$ 2.500 get you?</Title>
-          <Text ta="center" c="dimmed" mb={50}>Your minimum spend credit (R$ 1.500) goes a long way.</Text>
+          <Title order={2} ta="center" mb={10} c="white">O que R$ 2.500 oferece?</Title>
+          <Text ta="center" c="dimmed" mb={50}>O valor inclui R$ 1.500 de consumação, que rende ótimas opções:</Text>
           
           <SimpleGrid cols={{ base: 1, md: 2 }} spacing={40}>
             {/* Example 1 */}
             <Card padding="lg" radius="md" withBorder style={{ borderColor: '#333', backgroundColor: '#141517' }}>
-              <Title order={3} size="h4" mb="md" c="bordeaux">The "Old World" Experience</Title>
-              <Text c="dimmed" size="sm" mb="md">A journey through history for 12 guests.</Text>
+              <Title order={3} size="h4" mb="md" c="bordeaux">Experiência "Velho Mundo"</Title>
+              <Text c="dimmed" size="sm" mb="md">Uma jornada pela história para 12 convidados.</Text>
               <List spacing="xs" size="sm" center icon={<ThemeIcon color="gray" variant="outline" size={16} radius="xl"><IconGlassFull size={10}/></ThemeIcon>}>
-                <List.Item>Welcome: Espumante Cave Geisse Nature</List.Item>
-                <List.Item>White: Chablis Le Classique (France)</List.Item>
-                <List.Item>Red: Brunello di Montalcino (Italy)</List.Item>
-                <List.Item>Food: 3x Large Charcuterie Boards + Artisan Breads</List.Item>
+                <List.Item>Boas-vindas: Espumante Cave Geisse Nature</List.Item>
+                <List.Item>Branco: Chablis Le Classique (França)</List.Item>
+                <List.Item>Tinto: Brunello di Montalcino (Itália)</List.Item>
+                <List.Item>Acompanha: 3x Tábuas de Frios + Pães Artesanais</List.Item>
               </List>
             </Card>
             
             {/* Example 2 */}
             <Card padding="lg" radius="md" withBorder style={{ borderColor: '#333', backgroundColor: '#141517' }}>
-              <Title order={3} size="h4" mb="md" c="bordeaux">The "New World" Discovery</Title>
-              <Text c="dimmed" size="sm" mb="md">Bold flavors and modern techniques for 15 guests.</Text>
+              <Title order={3} size="h4" mb="md" c="bordeaux">Descoberta "Novo Mundo"</Title>
+              <Text c="dimmed" size="sm" mb="md">Sabores intensos e modernos para 15 convidados.</Text>
               <List spacing="xs" size="sm" center icon={<ThemeIcon color="gray" variant="outline" size={16} radius="xl"><IconGlassFull size={10}/></ThemeIcon>}>
-                <List.Item>Welcome: Rosé de Provence Style (Uruguay)</List.Item>
-                <List.Item>Red 1: Catena Zapata Malbec (Argentina)</List.Item>
-                <List.Item>Red 2: Napa Valley Cabernet (USA)</List.Item>
-                <List.Item>Food: 4x Mixed Cheese & Jam Boards</List.Item>
+                <List.Item>Boas-vindas: Rosé estilo Provence (Uruguai)</List.Item>
+                <List.Item>Tinto 1: Catena Zapata Malbec (Argentina)</List.Item>
+                <List.Item>Tinto 2: Napa Valley Cabernet (EUA)</List.Item>
+                <List.Item>Acompanha: 4x Tábuas de Queijos e Geleias</List.Item>
               </List>
             </Card>
           </SimpleGrid>
           <Text ta="center" size="xs" c="dimmed" mt={30} fs="italic">
-            *Examples only. Our Sommelier will build a custom list based on your team's preferences.
+            *Exemplos ilustrativos. O Sommelier montará a carta ideal baseada na preferência do grupo.
           </Text>
         </Container>
       </Box>
@@ -122,14 +123,14 @@ export default function Home() {
         <Card withBorder shadow="sm" radius="md" padding="xl" style={{ borderColor: '#AD4C61' }}>
           <Stack align="center" gap="xs">
             <Text tt="uppercase" fw={700} c="bordeaux" style={{ letterSpacing: 2 }}>
-              The Corporate Package
+              Pacote Corporativo
             </Text>
-            <Title order={2}>Rent The House</Title>
-            <Text size="sm" c="dimmed">Ideal for 10-20 Guests</Text>
+            <Title order={2}>Adega Exclusiva</Title>
+            <Text size="sm" c="dimmed">Ideal para grupos de 10 a 20 pessoas</Text>
           </Stack>
           
           <Group justify="center" mt="xl" mb="xl">
-             <Text size="xl" span fw={700}>Minimum Spend:</Text>
+             <Text size="xl" span fw={700}>Consumação Mínima:</Text>
              <Text size="xl" span c="bordeaux" fw={900} style={{ fontSize: '2.5rem' }}>R$ 2.500</Text>
           </Group>
 
@@ -138,41 +139,41 @@ export default function Home() {
               <IconCalendarEvent size={16} />
             </ThemeIcon>
           }>
-            <List.Item>Exclusive use of the space (4 Hours)</List.Item>
-            <List.Item>R$ 1.500 consumable credit included</List.Item>
-            <List.Item>Dedicated Sommelier service</List.Item>
-            <List.Item>Charcuterie board setup included</List.Item>
+            <List.Item>Uso exclusivo do espaço (4 Horas)</List.Item>
+            <List.Item>R$ 1.500 de crédito em vinhos/comida</List.Item>
+            <List.Item>Serviço de Sommelier dedicado</List.Item>
+            <List.Item>Montagem de antepastos inclusa</List.Item>
           </List>
 
           {/* REFINED CTA */}
           <Button component="a" href={whatsappLink} fullWidth size="xl" color="bordeaux" mt={40}>
-            Consult with Sommelier
+            Falar com o Sommelier
           </Button>
           <Text size="xs" c="dimmed" ta="center" mt="sm">
-            Available Tuesdays, Wednesdays, and Thursdays
+            Disponível Terças, Quartas e Quintas
           </Text>
         </Card>
       </Container>
 
       {/* FAQ SECTION */}
       <Container size="md" pb={80}>
-        <Title order={2} ta="center" mb={40}>Common Questions</Title>
+        <Title order={2} ta="center" mb={40}>Perguntas Frequentes</Title>
         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={30}>
           <Stack gap="xs">
-            <Text fw={700}>Is the venue really private?</Text>
-            <Text size="sm" c="dimmed">Yes. When you book the corporate package, we close the doors to the public. It is 100% yours.</Text>
+            <Text fw={700}>O espaço fica fechado só para nós?</Text>
+            <Text size="sm" c="dimmed">Sim. Ao contratar o pacote "Adega Exclusiva", nós não abrimos para o público geral. A casa é sua.</Text>
           </Stack>
           <Stack gap="xs">
-            <Text fw={700}>Can we bring outside food?</Text>
-            <Text size="sm" c="dimmed">We provide cold cuts and appetizers. For hot meals, we have partnerships with local restaurants for delivery.</Text>
+            <Text fw={700}>Tem jantar ou comida quente?</Text>
+            <Text size="sm" c="dimmed">Nosso foco são os vinhos e tábuas de frios/antepastos. Para jantar completo, temos parceiros que entregam aqui.</Text>
           </Stack>
           <Stack gap="xs">
-            <Text fw={700}>What if we exceed the consumption credit?</Text>
-            <Text size="sm" c="dimmed">The R$ 1.500 is just the minimum. Anything consumed above that is billed at standard menu price.</Text>
+            <Text fw={700}>E se passar do valor da consumação?</Text>
+            <Text size="sm" c="dimmed">O valor de R$ 1.500 é o mínimo garantido. O que for consumido acima disso é cobrado normalmente no checkout.</Text>
           </Stack>
           <Stack gap="xs">
-            <Text fw={700}>Is there parking?</Text>
-            <Text size="sm" c="dimmed">Yes, we have spaces available in front of the adega.</Text> 
+            <Text fw={700}>Tem estacionamento?</Text>
+            <Text size="sm" c="dimmed">Sim, temos vagas disponíveis em frente à adega.</Text> 
           </Stack>
         </SimpleGrid>
       </Container>
@@ -181,7 +182,7 @@ export default function Home() {
       <Box bg="#1A1B1E" py={40}>
         <Container size="md" ta="center">
           <Title order={4} c="white" mb="sm">Madame du Vin</Title>
-          <Text c="dimmed" size="sm">Private Events • Wine Education • Retail</Text>
+          <Text c="dimmed" size="sm">Eventos Privados • Wine Education • Varejo</Text>
         </Container>
       </Box>
     </>
