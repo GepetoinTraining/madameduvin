@@ -3,7 +3,7 @@ import { IconGlassFull, IconBuildingSkyscraper, IconChefHat, IconCalendarEvent, 
 
 export default function Home() {
   // UPDATE THIS LINK to their real WhatsApp
-  const whatsappLink = "https://wa.me/5547000000000?text=Olá,%20gostaria%20de%20saber%20sobre%20eventos%20corporativos.";
+  const whatsappLink = "https://wa.me/554796972470?text=Olá,%20gostaria%20de%20saber%20sobre%20eventos%20corporativos.";
 
   return (
     <>
